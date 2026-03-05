@@ -1,0 +1,258 @@
+/* =========================================================
+   PASEANDO SEVILLA · ARCHIVE (CPT: restaurante)
+   Archivo: /assets/css/restaurante-archive.css
+   ========================================================= */
+
+:root{
+  --rs-vino:#7A1E2C;
+  --rs-dorado:#C6A75E;
+  --rs-crema:#F6F2E9;
+  --rs-ink:#111827;
+  --rs-muted:#4B5563;
+  --rs-border: rgba(122,30,44,.15);
+  --rs-radius:18px;
+  --rs-shadow-soft: 0 10px 28px rgba(17, 24, 39, .08);
+  --rs-shadow: 0 18px 50px rgba(17, 24, 39, .12);
+  --rs-ring: 0 0 0 4px rgba(198,167,94,.35);
+}
+
+/* ---------- Layout ---------- */
+
+.ps-archive .ps-wrap{ 
+  max-width:1180px; 
+}
+
+/* ---------- HERO ---------- */
+
+.ps-archive-hero{
+  margin: 0 0 1.25rem;
+  border-radius: var(--rs-radius);
+  overflow:hidden;
+  border: 1px solid var(--rs-border);
+  box-shadow: var(--rs-shadow-soft);
+  background:
+    radial-gradient(900px 240px at 15% 10%, rgba(198,167,94,.25), transparent 60%),
+    linear-gradient(180deg, rgba(246,242,233,.95), rgba(255,255,255,.9));
+}
+
+.ps-archive-hero__inner{
+  padding: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.ps-archive-title{
+  margin: 0 0 .35rem;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  color: var(--rs-ink);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.ps-archive-lead{
+  margin: 0;
+  color: var(--rs-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ---------- GRID ---------- */
+
+.ps-grid-archive{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+/* ---------- Card ---------- */
+
+.ps-card--archive{
+  background: rgba(255,255,255,.85);
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius);
+  box-shadow: var(--rs-shadow-soft);
+  overflow: hidden;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.ps-card--archive:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--rs-shadow);
+  border-color: rgba(122,30,44,.3);
+}
+
+/* ---------- Media ---------- */
+
+.ps-card__media{
+  display:block;
+  position:relative;
+  text-decoration:none;
+}
+
+.ps-card__img{
+  width:100%;
+  height: 220px;
+  object-fit: cover;
+  display:block;
+}
+
+.ps-card__placeholder{
+  height: 220px;
+  background:
+    linear-gradient(135deg, rgba(198,167,94,.2), rgba(122,30,44,.12)),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.25) 0 12px, rgba(255,255,255,.12) 12px 24px);
+}
+
+/* Badge */
+
+.ps-card__badge{
+  position:absolute;
+  left: 14px;
+  top: 14px;
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: .85rem;
+  background: rgba(17,24,39,.85);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+}
+
+/* ---------- Body ---------- */
+
+.ps-card__body{
+  padding: 1.1rem 1.1rem 1.2rem;
+}
+
+.ps-card__title{
+  margin: 0 0 .5rem;
+  font-size: 1.15rem;
+  letter-spacing: -.01em;
+}
+
+.ps-card__title a{
+  color: var(--rs-ink);
+  text-decoration: none;
+}
+
+.ps-card__title a:hover{
+  color: var(--rs-vino);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ps-card__text{
+  margin: 0 0 1rem;
+  color: var(--rs-muted);
+  line-height: 1.6;
+}
+
+/* ---------- Actions ---------- */
+
+.ps-card__actions{
+  display:flex;
+  gap:.6rem;
+  flex-wrap: wrap;
+}
+
+.ps-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: .72rem .95rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration:none;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease, border-color .12s ease;
+}
+
+.ps-btn:focus-visible{ 
+  outline:none; 
+  box-shadow: var(--rs-ring); 
+}
+
+/* Primary */
+
+.ps-btn--primary{
+  background: linear-gradient(135deg, var(--rs-dorado), #e7c97a);
+  color: #1a1a1a;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 28px rgba(198,167,94,.28);
+}
+
+.ps-btn--primary:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(198,167,94,.38);
+}
+
+/* Ghost */
+
+.ps-btn--ghost{
+  background: rgba(255,255,255,.7);
+  color: var(--rs-vino);
+  border: 1px solid rgba(122,30,44,.25);
+}
+
+.ps-btn--ghost:hover{
+  transform: translateY(-1px);
+  border-color: var(--rs-vino);
+}
+
+/* ---------- Pagination ---------- */
+
+.ps-pagination{
+  margin: 2rem 0 1rem;
+}
+
+.ps-pagination .page-numbers{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 .75rem;
+  margin: .2rem;
+  border-radius: 999px;
+  border: 1px solid var(--rs-border);
+  text-decoration:none;
+  font-weight: 800;
+  color: var(--rs-ink);
+  background: rgba(255,255,255,.7);
+}
+
+.ps-pagination .page-numbers.current{
+  background: rgba(198,167,94,.25);
+  border-color: rgba(198,167,94,.45);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 980px){
+  .ps-grid-archive{ 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+}
+
+@media (max-width: 640px){
+  .ps-grid-archive{ 
+    grid-template-columns: 1fr; 
+  }
+  .ps-card__img, 
+  .ps-card__placeholder{ 
+    height: 210px; 
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce){
+  .ps-card--archive, 
+  .ps-btn{ 
+    transition:none; 
+  }
+  .ps-card--archive:hover, 
+  .ps-btn:hover{ 
+    transform:none; 
+  }
+}

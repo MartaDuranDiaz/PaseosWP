@@ -55,15 +55,15 @@ Estos conceptos me han permitido comprender mejor cómo WordPress puede transfor
 
 ## Página principal
 
-![Home](docs/img/home.png)
+![Home](docs/img/inicio.jpeg)
 
-## Listado automático de paseos
+## Listado automático de restaurantes
 
-![Listado de paseos](docs/img/listado-paseos.png)
+![Listado de paseos](docs/img/restaurantes.jpeg)
 
-## Página de reserva de paseo
+## Página de reserva de restaurante
 
-![Reserva paseo](docs/img/reserva.png)
+![Reserva paseo](docs/img/reservaRestaurante.jpeg)
 ---
 
 # Estructura del proyecto
